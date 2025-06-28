@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,18 +40,15 @@
                     <p class="text-lg md:text-xl mb-8 text-gray-700">
                         Você já se sentiu ansioso antes de comer, com medo de errar na contagem de carboidratos e ver a glicemia disparar? Nosso eBook traz 30+ receitas testadas e seguras para você retomar o controle sem frustração.
                     </p>
-                    
                     <!-- Timer Section -->
-                    <div class="bg-white rounded-xl p-6 mb-8 shadow-lg">
+                    <!-- <div class="bg-white rounded-xl p-6 mb-8 shadow-lg">
                         <p class="font-bold text-secondary text-sm uppercase mb-4">OFERTA ESPECIAL TERMINA EM:</p>
                         <div id="timer" class="flex justify-center gap-4"></div>
-                    </div>
-                    
+                    </div> -->
                     <!-- CTA Button -->
                     <a href="#buy" class="inline-block bg-primary hover:bg-primary/90 text-white font-poppins font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl uppercase tracking-wide">
                         SIM, EU QUERO MEU EBOOK
                     </a>
-                    
                     <!-- Trust Indicators -->
                     <div class="flex flex-wrap justify-center lg:justify-start gap-6 mt-8 text-sm text-gray-600">
                         <div class="flex items-center gap-2">
@@ -62,58 +59,47 @@
                             <i class="fas fa-clock text-primary"></i>
                             <span>Acesso Imediato</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-mobile-alt text-primary"></i>
-                            <span>Mobile Friendly</span>
-                        </div>
+                     
                     </div>
                 </div>
-                
                 <div class="flex-1">
-                    <img src="/receita.png" alt="Capa do Ebook de receitas para diabéticos" class="w-full max-w-md mx-auto rounded-xl shadow-2xl">
+                    <img src="/public/img/capa.png" alt="Capa do Ebook de receitas para diabéticos" class="w-full max-w-md mx-auto rounded-xl shadow-2xl">
                 </div>
             </div>
         </div>
     </header>
-
     <!-- Pain Section -->
     <section id="pain" class="py-16 lg:py-24">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl text-center mb-16">
                 Você se reconhece em algum destes momentos?
             </h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
                     <i class="fas fa-hand-paper text-5xl text-secondary mb-6"></i>
                     <h3 class="font-poppins font-bold text-xl mb-4">Frustração</h3>
                     <p class="text-gray-700">Passar horas calculando porções e ainda sentir que não foi o suficiente. "Isso me deixou pra baixo e frustrada por não estar onde deveria"</p>
                 </div>
-                
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
                     <i class="fas fa-ghost text-5xl text-secondary mb-6"></i>
                     <h3 class="font-poppins font-bold text-xl mb-4">Medo</h3>
                     <p class="text-gray-700">A insegurança de uma refeição errada subir sua glicemia. "Estou assustado e sobrecarregado com a enormidade disto"</p>
                 </div>
-                
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
                     <i class="fas fa-heart-broken text-5xl text-secondary mb-6"></i>
                     <h3 class="font-poppins font-bold text-xl mb-4">Culpa</h3>
                     <p class="text-gray-700">Sentir-se responsável por não manter a dieta apesar do esforço. "Me sinto muito mal por estar colocando um fardo financeiro tão grande na minha família"</p>
                 </div>
-                
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
                     <i class="fas fa-comment-slash text-5xl text-secondary mb-6"></i>
                     <h3 class="font-poppins font-bold text-xl mb-4">Solidão</h3>
                     <p class="text-gray-700">Comer sempre as mesmas receitas sem sabor. "Sinto que me decepcionei"</p>
                 </div>
-                
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
                     <i class="fas fa-bolt text-5xl text-secondary mb-6"></i>
                     <h3 class="font-poppins font-bold text-xl mb-4">Ansiedade</h3>
                     <p class="text-gray-700">Dúvidas sobre substituições e porções. "Quero estar bem, eu quero estar bem..."</p>
                 </div>
-                
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
                     <i class="fas fa-sad-tear text-5xl text-secondary mb-6"></i>
                     <h3 class="font-poppins font-bold text-xl mb-4">Tristeza</h3>
@@ -122,15 +108,13 @@
             </div>
         </div>
     </section>
-
     <!-- Solution Section -->
     <section id="solution" class="py-16 lg:py-24 bg-light">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="flex-1">
-                    <img src="/image.png" alt="Prato de comida saudável e deliciosa" class="w-full rounded-xl shadow-xl">
+                    <img src="/public/img/image.png" alt="Prato de comida saudável e deliciosa" class="w-full rounded-xl shadow-xl">
                 </div>
-                
                 <div class="flex-1">
                     <h2 class="font-poppins font-bold text-3xl md:text-4xl mb-8">
                         Transforme Suas Refeições
@@ -138,45 +122,34 @@
                     <p class="text-lg mb-8 text-gray-700">
                         Nossas receitas foram desenhadas para acolher suas emoções, reduzindo ansiedade e frustração com uma abordagem prática:
                     </p>
-                    
                     <ul class="space-y-4">
                         <li class="flex items-start gap-4">
                             <i class="fas fa-check-circle text-2xl text-primary mt-1"></i>
-                            <div>
-                                <strong>Passo a passo claro</strong> que dá confiança e elimina dúvidas
-                            </div>
+                            <div><strong>Passo a passo claro</strong> que dá confiança e elimina dúvidas</div>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fas fa-check-circle text-2xl text-primary mt-1"></i>
-                            <div>
-                                <strong>Porções calculadas</strong> para controle exato da glicemia
-                            </div>
+                            <div><strong>Porções calculadas</strong> para controle exato da glicemia</div>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fas fa-check-circle text-2xl text-primary mt-1"></i>
-                            <div>
-                                <strong>Dicas de substituições</strong> sem perder o sabor
-                            </div>
+                            <div><strong>Dicas de substituições</strong> sem perder o sabor</div>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fas fa-check-circle text-2xl text-primary mt-1"></i>
-                            <div>
-                                <strong>Info nutricional completa</strong> para seu diário alimentar
-                            </div>
+                            <div><strong>Info nutricional completa</strong> para seu diário alimentar</div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- What You'll Get Section -->
     <section class="py-16 lg:py-24">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl text-center mb-16">
                 O que você vai receber no eBook
             </h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
                     <div class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -185,7 +158,6 @@
                     <h3 class="font-poppins font-bold text-xl mb-4">30+ Receitas</h3>
                     <p class="text-gray-700">Testadas e aprovadas por diabéticos reais</p>
                 </div>
-                
                 <div class="text-center">
                     <div class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-calculator text-3xl text-primary"></i>
@@ -193,7 +165,6 @@
                     <h3 class="font-poppins font-bold text-xl mb-4">Contagem de Carboidratos</h3>
                     <p class="text-gray-700">Valores precisos para cada receita</p>
                 </div>
-                
                 <div class="text-center">
                     <div class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-clock text-3xl text-primary"></i>
@@ -201,7 +172,6 @@
                     <h3 class="font-poppins font-bold text-xl mb-4">Tempo de Preparo</h3>
                     <p class="text-gray-700">Receitas rápidas para o dia a dia</p>
                 </div>
-                
                 <div class="text-center">
                     <div class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-heart text-3xl text-primary"></i>
@@ -212,17 +182,15 @@
             </div>
         </div>
     </section>
-
     <!-- Recipe Preview Section -->
     <section class="py-16 lg:py-24 bg-light">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl text-center mb-16">
                 Veja algumas das receitas que você vai receber
             </h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <img src="https://placehold.co/400x250/2A9D8F/FFFFFF?text=Receita+1" alt="Receita 1" class="w-full h-48 object-cover">
+                    <img src="/image.png" alt="Receita 1" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="font-poppins font-bold text-xl mb-2">Panqueca de Aveia</h3>
                         <p class="text-gray-600 mb-4">15g de carboidratos • 15 min</p>
@@ -232,9 +200,8 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <img src="https://placehold.co/400x250/E76F51/FFFFFF?text=Receita+2" alt="Receita 2" class="w-full h-48 object-cover">
+                    <img src="/image.png" alt="Receita 2" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="font-poppins font-bold text-xl mb-2">Salada de Quinoa</h3>
                         <p class="text-gray-600 mb-4">20g de carboidratos • 20 min</p>
@@ -244,9 +211,8 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <img src="https://placehold.co/400x250/264653/FFFFFF?text=Receita+3" alt="Receita 3" class="w-full h-48 object-cover">
+                    <img src="/image.png" alt="Receita 3" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="font-poppins font-bold text-xl mb-2">Smoothie Verde</h3>
                         <p class="text-gray-600 mb-4">12g de carboidratos • 5 min</p>
@@ -259,30 +225,24 @@
             </div>
         </div>
     </section>
-
     <!-- Author Section -->
     <section id="author" class="py-16 lg:py-24">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl text-center mb-16">
                 Conheça Quem Está Por Trás do eBook
             </h2>
-            
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="flex-1 text-center lg:text-left">
-                    <img src="https://placehold.co/400x400/264653/FFFFFF?text=Cínthia+Fontes" alt="Foto da nutricionista Cínthia Fontes" class="w-80 h-80 rounded-full mx-auto lg:mx-0 shadow-xl mb-8">
+                    <img src="/Cinthia 2.jpg" alt="Foto da nutricionista Cínthia Fontes" class="auto lg:mx-0 shadow-xl mb-8">
                 </div>
-                
                 <div class="flex-1">
                     <h3 class="font-poppins font-bold text-2xl md:text-3xl mb-4">Olá, eu sou a Cínthia Fontes</h3>
                     <p class="font-semibold text-lg text-primary mb-6">Nutricionista formada pela Universidade Federal de Sergipe e mestranda em Endocrinologia.</p>
-                    
                     <div class="space-y-4 text-gray-700">
                         <p>Ao longo de mais de 13 anos de atendimento a pacientes com diabetes, vi a angústia de quem não sabia calcular cada grama de carboidrato para suas refeições.</p>
                         <p>Decidi então unir minha paixão pela nutrição acadêmica e minha experiência clínica para criar este eBook: um guia com receitas práticas, seguras e deliciosas, que devolvem a confiança e o prazer de comer sem ansiedade.</p>
                         <p>Este projeto é fruto de noites de estudo, testes em consultório e muitas histórias reais de superação. Convido você a fazer parte desta jornada de transformação!</p>
                     </div>
-                    
-                    <!-- Credentials -->
                     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="text-center p-4 bg-primary/10 rounded-lg">
                             <div class="font-bold text-2xl text-primary">13+</div>
@@ -301,14 +261,12 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 lg:py-24 bg-light">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl text-center mb-16">
                 O que nossos leitores dizem
             </h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-lg">
                     <div class="flex items-center gap-2 mb-4">
@@ -327,7 +285,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="bg-white p-8 rounded-xl shadow-lg">
                     <div class="flex items-center gap-2 mb-4">
                         <i class="fas fa-star text-yellow-400"></i>
@@ -348,7 +305,6 @@
             </div>
         </div>
     </section>
-
     <!-- Guarantee Section -->
     <section id="guarantee" class="py-16 lg:py-24">
         <div class="container mx-auto px-4 max-w-6xl">
@@ -359,15 +315,12 @@
                             <i class="fas fa-shield-alt text-4xl"></i>
                         </div>
                     </div>
-                    
                     <h2 class="font-poppins font-bold text-3xl md:text-4xl mb-6">
                         Garantia de 15 Dias
                     </h2>
-                    
                     <p class="text-xl mb-8 opacity-90">
                         Se em até 15 dias você não estiver 100% satisfeito com o eBook, devolvemos todo o seu dinheiro. Sem perguntas, sem complicações.
                     </p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div class="flex items-center gap-3">
                             <i class="fas fa-check-circle text-2xl"></i>
@@ -382,7 +335,6 @@
                             <span>Processo simples</span>
                         </div>
                     </div>
-                    
                     <p class="text-lg font-semibold">
                         Você não tem nada a perder e tudo a ganhar!
                     </p>
@@ -390,19 +342,15 @@
             </div>
         </div>
     </section>
-
     <!-- Final CTA Section -->
     <section id="buy" class="py-16 lg:py-24 bg-dark text-white">
         <div class="container mx-auto px-4 max-w-4xl text-center">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl mb-6">
                 Chegou a Hora de Transformar Sua Vida
             </h2>
-            
             <p class="text-xl mb-8 opacity-90">
                 Pare de viver na incerteza. Comece hoje mesmo a controlar sua glicemia com prazer e confiança.
             </p>
-            
-            <!-- Price Display -->
             <div class="bg-white/10 rounded-xl p-8 mb-8">
                 <div class="flex items-center justify-center gap-4 mb-4">
                     <span class="text-3xl line-through opacity-70">R$ 97,00</span>
@@ -410,19 +358,13 @@
                 </div>
                 <p class="text-lg">Economia de R$ 50,00 - Oferta por tempo limitado!</p>
             </div>
-            
-            <!-- Timer -->
             <div class="bg-white/10 rounded-xl p-6 mb-8">
                 <p class="font-bold text-secondary text-sm uppercase mb-4">OFERTA ESPECIAL TERMINA EM:</p>
                 <div id="timer-final" class="flex justify-center gap-4"></div>
             </div>
-            
-            <!-- CTA Button -->
             <a href="#" class="inline-block bg-secondary hover:bg-secondary/90 text-white font-poppins font-bold py-6 px-12 rounded-full text-xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl uppercase tracking-wide mb-8">
                 SIM, EU QUERO MEU EBOOK AGORA
             </a>
-            
-            <!-- Trust Indicators -->
             <div class="flex flex-wrap justify-center gap-6 text-sm opacity-80">
                 <div class="flex items-center gap-2">
                     <i class="fas fa-lock"></i>
@@ -432,37 +374,29 @@
                     <i class="fas fa-download"></i>
                     <span>Acesso Imediato</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>Mobile Friendly</span>
-                </div>
+       
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section class="py-16 lg:py-24 bg-light">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="font-poppins font-bold text-3xl md:text-4xl text-center mb-16">
                 Perguntas Frequentes
             </h2>
-            
             <div class="space-y-6">
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <h3 class="font-poppins font-bold text-xl mb-4">Como vou receber o eBook?</h3>
                     <p class="text-gray-700">Você receberá o acesso imediatamente após a confirmação do pagamento. O eBook estará disponível para download em PDF e também para leitura online.</p>
                 </div>
-                
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <h3 class="font-poppins font-bold text-xl mb-4">As receitas são adequadas para diabetes tipo 1 e 2?</h3>
                     <p class="text-gray-700">Sim! Todas as receitas foram desenvolvidas pensando em ambos os tipos de diabetes, com contagem precisa de carboidratos e dicas específicas para cada caso.</p>
                 </div>
-                
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <h3 class="font-poppins font-bold text-xl mb-4">Posso usar em qualquer dispositivo?</h3>
                     <p class="text-gray-700">Absolutamente! O eBook é compatível com smartphones, tablets, computadores e pode ser impresso se preferir.</p>
                 </div>
-                
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <h3 class="font-poppins font-bold text-xl mb-4">E se eu não gostar do conteúdo?</h3>
                     <p class="text-gray-700">Oferecemos garantia de 15 dias. Se não estiver satisfeito, devolvemos 100% do seu dinheiro, sem perguntas.</p>
@@ -470,7 +404,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="bg-dark text-white py-12">
         <div class="container mx-auto px-4 max-w-6xl text-center">
@@ -480,7 +413,6 @@
             </p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
