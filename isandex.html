@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book Receitas com Contagem de Carboidratos - Cinthia Fontes</title>
+    <meta name="description" content="Descubra receitas seguras e saborosas para diabetes com contagem exata de carboidratos. E-book exclusivo da nutricionista Cinthia Fontes.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            500: '#667eea',
+                            600: '#5a67d8',
+                            700: '#4c51bf',
+                        },
+                        secondary: {
+                            500: '#764ba2',
+                            600: '#6b46c1',
+                        },
+                        accent: {
+                            500: '#ff6b6b',
+                            600: '#ee5a24',
+                        },
+                        success: {
+                            500: '#4ade80',
+                            600: '#22c55e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-heartbeat text-2xl"></i>
+                    <span class="font-bold text-lg">NutriCinthia</span>
+                </div>
+                <button class="bg-white/20 hover:bg-white/30 border border-white/30 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2" onclick="goToCheckout()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="hidden sm:inline">Comprar E-book</span>
+                    <span class="sm:hidden">Comprar</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white pt-24 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <span>Especialista em Diabetes há 15 anos</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">🍽️ Chega de Receitas Enganosas para Diabetes!</h1>
+                    <p class="text-xl mb-8 opacity-90">Descubra o e-book exclusivo de receitas com <strong>Contagem de Carboidratos</strong>, criado por quem entende de verdade do assunto.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-lg">
+                            <i class="fas fa-check-circle text-success-500 text-xl"></i>
+                            <span>Contagem exata de carboidratos</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-lg">
+                            <i class="fas fa-check-circle text-success-500 text-xl"></i>
+                            <span>Receitas seguras e saborosas</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-lg">
+                            <i class="fas fa-check-circle text-success-500 text-xl"></i>
+                            <span>+15 mil pacientes atendidos</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-3 mx-auto mb-4" onclick="goToCheckout()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Quero meu e-book agora!
+                        </button>
+                        <div class="text-center mb-4">
+                            <div class="text-lg line-through opacity-70">De R$ 97,00</div>
+                            <div class="text-3xl font-bold text-success-500">Por apenas R$ 47,00</div>
+                            <div class="text-lg opacity-90">ou 5x de R$ 9,40</div>
+                        </div>
+                        <p class="text-sm opacity-80">⚠️ Material exclusivo - Não vendido em outras plataformas</p>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative transform rotate-y-12 rotate-x-6 hover:rotate-y-8 hover:rotate-x-4 transition-transform duration-500">
+                        <div class="w-72 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex flex-col justify-center items-center text-center text-white shadow-2xl">
+                            <i class="fas fa-book-open text-6xl text-accent-500 mb-6"></i>
+                            <h3 class="text-xl font-bold mb-2 px-4">Receitas com Contagem de Carboidratos</h3>
+                            <p class="text-gray-300">Por Cinthia Fontes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Você já deve ter visto por aí...</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">O Instagram está cheio de receitas "fit" ou "para diabéticos". Mas na prática, você tenta fazer... e acontece o quê?</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border-2 border-gray-200 hover:border-accent-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-sad-tear text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Receitas sem sabor</h3>
+                    <p class="text-gray-600">Ou a receita fica sem sabor, difícil de comer...</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border-2 border-gray-200 hover:border-accent-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chart-line text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Glicose dispara</h3>
+                    <p class="text-gray-600">Ou a glicose dispara e o descontrole vem...</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-8 rounded-2xl text-center mb-8" data-aos="fade-up">
+                <p class="text-xl font-semibold mb-2">Isso acontece porque criar receitas seguras e saborosas para quem tem diabetes não é algo simples.</p>
+                <p class="text-lg opacity-90">É preciso conhecimento técnico, experiência e, principalmente, responsabilidade!</p>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-3 mx-auto" onclick="goToCheckout()">
+                    <i class="fas fa-arrow-right"></i>
+                    Quero resolver isso agora!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">🎯 Foi por isso que eu decidi criar este e-book exclusivo para você!</h2>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl mb-8">
+                    <div class="flex flex-col lg:flex-row items-center gap-8">
+                        <div class="w-24 h-24 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user-md text-4xl text-white"></i>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Eu sou Cinthia Fontes</h3>
+                            <p class="text-gray-600 text-lg">Nutricionista especialista em diabetes, com mais de 15 anos de experiência, mais de 15 mil pacientes atendidos, e uma missão: Facilitar o dia a dia de quem vive com diabetes, sem abrir mão do prazer de comer bem e com segurança.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Agora você pode cozinhar sem medo!</h3>
+                    <p class="text-xl text-gray-600 mb-8 text-center">Reuni neste material receitas selecionadas a dedo, com:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-lg">
+                            <i class="fas fa-calculator text-2xl text-success-500 flex-shrink-0"></i>
+                            <span class="text-gray-700">Contagem exata de carboidratos em cada receita</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-lg">
+                            <i class="fas fa-users text-2xl text-success-500 flex-shrink-0"></i>
+                            <span class="text-gray-700">Receitas pensadas tanto para diabetes tipo 1 quanto tipo 2</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-lg">
+                            <i class="fas fa-graduation-cap text-2xl text-success-500 flex-shrink-0"></i>
+                            <span class="text-gray-700">Técnicas que ensino nos meus cursos e consultórios</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-lg">
+                            <i class="fas fa-shield-alt text-2xl text-success-500 flex-shrink-0"></i>
+                            <span class="text-gray-700">Tudo baseado em evidências e prática clínica real</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-3 mx-auto" onclick="goToCheckout()">
+                        <i class="fas fa-heart"></i>
+                        Quero cozinhar sem medo!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Difference Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">💡 Este e-book é diferente de tudo que você já viu!</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Não é só um "livrinho de receitas". É um guia prático, onde cada receita já vem com:</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-8 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-calculator text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Quantidade exata de carboidratos por porção</h3>
+                </div>
+                <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-8 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Ingredientes seguros e saborosos</h3>
+                </div>
+                <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-8 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Preparos simples e práticos para o dia a dia</h3>
+                </div>
+                <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-8 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Segurança e tranquilidade no controle da glicemia</h3>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-3 mx-auto" onclick="goToCheckout()">
+                    <i class="fas fa-star"></i>
+                    Quero esse diferencial!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">🎁 Você ainda vai ganhar 2 aulas exclusivas como bônus:</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-2xl shadow-xl relative border-l-4 border-accent-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-4 left-6 w-10 h-10 bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Por que a Contagem de Carboidratos é a chave para o controle glicêmico no Diabetes Tipo 1 e Tipo 2</h3>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl relative border-l-4 border-accent-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-6 w-10 h-10 bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">O que você precisa saber antes de fazer qualquer receita se você tem diabetes</h3>
+                </div>
+            </div>
+
+            <div class="text-center mb-8" data-aos="fade-up">
+                <div class="inline-block bg-gradient-to-r from-success-500 to-success-600 text-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-4">Valor dos Bônus</h3>
+                    <div class="text-5xl font-bold mb-2">R$ 197,00</div>
+                    <p class="text-xl font-semibold">Você recebe GRÁTIS!</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-3 mx-auto" onclick="goToCheckout()">
+                    <i class="fas fa-gift"></i>
+                    Quero os bônus também!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">👩🏻‍⚕️ Quem sou eu para te ajudar?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Sou Cinthia Fontes, nutricionista há 15 anos, especialista em diabetes e apaixonada por transformar o tratamento em algo mais leve e possível.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-certificate text-2xl text-primary-500 flex-shrink-0"></i>
+                    <span class="text-gray-700">Nutricionista - Especialista em Diabetes</span>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-graduation-cap text-2xl text-primary-500 flex-shrink-0"></i>
+                    <span class="text-gray-700">Mestre em Nutrição - UFS</span>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-user-graduate text-2xl text-primary-500 flex-shrink-0"></i>
+                    <span class="text-gray-700">Educadora em Diabetes - SBD/IDF</span>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-pump-medical text-2xl text-primary-500 flex-shrink-0"></i>
+                    <span class="text-gray-700">Educadora em Bomba de Insulina - Roche/Medtronic</span>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-chalkboard-teacher text-2xl text-primary-500 flex-shrink-0"></i>
+                    <span class="text-gray-700">Coach - IBC</span>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-stethoscope text-2xl text-primary-500 flex-shrink-0"></i>
+                    <span class="text-gray-700">Especialista em Nutrição Clínica - Gama Filho</span>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-8 rounded-2xl text-center mb-8" data-aos="fade-up">
+                <p class="text-xl font-semibold">E principalmente: alguém que escuta, entende e cuida de quem vive com diabetes todos os dias!</p>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-3 mx-auto" onclick="goToCheckout()">
+                    <i class="fas fa-user-md"></i>
+                    Confio na especialista!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">💰 Investimento Especial</h2>
+                <p class="text-xl opacity-90">Por tempo limitado, você pode ter acesso a todo este material por um valor especial</p>
+            </div>
+            
+            <div class="bg-white text-gray-800 p-8 rounded-3xl shadow-2xl max-w-2xl mx-auto" data-aos="zoom-in">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">E-book + Bônus Exclusivos</h3>
+                    <div class="space-y-2">
+                        <div class="text-xl line-through opacity-60">De R$ 294,00</div>
+                        <div class="text-5xl font-bold text-accent-500">Por apenas R$ 47,00</div>
+                        <div class="bg-gradient-to-r from-success-500 to-success-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">Economia de R$ 247,00</div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check text-success-500 text-xl flex-shrink-0"></i>
+                        <span class="text-gray-700">E-book com 50+ receitas com contagem de carboidratos</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check text-success-500 text-xl flex-shrink-0"></i>
+                        <span class="text-gray-700">2 aulas bônus exclusivas</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check text-success-500 text-xl flex-shrink-0"></i>
+                        <span class="text-gray-700">Acesso vitalício ao material</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check text-success-500 text-xl flex-shrink-0"></i>
+                        <span class="text-gray-700">Suporte por e-mail</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check text-success-500 text-xl flex-shrink-0"></i>
+                        <span class="text-gray-700">Garantia de 7 dias</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-12 py-5 rounded-full text-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-3 mx-auto mb-4" onclick="goToCheckout()">
+                        <i class="fas fa-shopping-cart"></i>
+                        Quero aproveitar esta oferta!
+                    </button>
+                    <div class="text-gray-600">ou 5x de R$ 9,40 sem juros</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-8">🛒 Garanta agora o seu e-book de Receitas com Contagem de Carboidratos e os bônus exclusivos!</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fas fa-chart-line text-2xl text-success-500"></i>
+                        <span class="text-lg">Controle melhor sua glicemia</span>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fas fa-utensils text-2xl text-success-500"></i>
+                        <span class="text-lg">Tenha segurança na hora de cozinhar</span>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fas fa-heart text-2xl text-success-500"></i>
+                        <span class="text-lg">Descubra que é possível ter sabor e saúde juntos</span>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fas fa-envelope text-2xl text-success-500"></i>
+                        <span class="text-lg">Receba o material diretamente no seu e-mail</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl mb-8 flex items-center gap-4 justify-center">
+                    <i class="fas fa-exclamation-triangle text-2xl text-yellow-300"></i>
+                    <p class="text-lg"><strong>Atenção:</strong> este material é digital e exclusivo, não está à venda em outras plataformas.</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="space-y-2">
+                        <div class="text-xl line-through opacity-70">De R$ 294,00</div>
+                        <div class="text-5xl font-bold text-success-500">Por apenas R$ 47,00</div>
+                        <div class="text-xl opacity-90">ou 5x de R$ 9,40</div>
+                    </div>
+                </div>
+
+                <button class="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500 text-white px-12 py-5 rounded-full text-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-3 mx-auto mb-8" onclick="goToCheckout()">
+                    <i class="fas fa-shopping-cart"></i>
+                    Quero meu e-book agora!
+                </button>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="flex items-center gap-2 justify-center">
+                        <i class="fas fa-lock text-success-500"></i>
+                        <span class="text-sm">100% Seguro</span>
+                    </div>
+                    <div class="flex items-center gap-2 justify-center">
+                        <i class="fas fa-clock text-success-500"></i>
+                        <span class="text-sm">Entrega Imediata</span>
+                    </div>
+                    <div class="flex items-center gap-2 justify-center">
+                        <i class="fas fa-mobile-alt text-success-500"></i>
+                        <span class="text-sm">Compatível com todos os dispositivos</span>
+                    </div>
+                    <div class="flex items-center gap-2 justify-center">
+                        <i class="fas fa-shield-alt text-success-500"></i>
+                        <span class="text-sm">Garantia de 7 dias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2024 Cinthia Fontes - Nutricionista Especialista em Diabetes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html> 
