@@ -1,9 +1,12 @@
 {
-    "builds": [
-      { "src": "index.html", "use": "@vercel/static" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
-  }
+  "builds": [
+    { "src": "public/**/*", "use": "@vercel/static" },
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/diabetes-ebook", "dest": "/public/diabetes-ebook/index.html" },
+    { "src": "/diabetes-ebook/(.*)", "dest": "/public/diabetes-ebook/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
   
