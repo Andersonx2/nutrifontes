@@ -2,10 +2,10 @@
   "version": 2,
   "public": true,
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
     { "source": "/diabetes-ebook", "destination": "/diabetes-ebook/index.html" },
     { "source": "/lp-02", "destination": "/lp-02/index.html" },
     { "source": "/lp-venda", "destination": "/lp-venda/index.html" },
     { "source": "/lp01", "destination": "/lp01/index.html" }
   ]
-  
 }
