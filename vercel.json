@@ -1,5 +1,7 @@
 {
   "routes": [
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/diabetes-ebook", "dest": "/diabetes-ebook/index.html" },
+    { "src": "/diabetes-ebook/(.*)", "dest": "/diabetes-ebook/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
