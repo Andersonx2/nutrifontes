@@ -329,39 +329,39 @@ function addEventTracking() {
     });
 }
 
-// Função para otimizar performance
-function optimizePerformance() {
-    // Lazy loading para imagens
-    const images = document.querySelectorAll('img');
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
+// // Função para otimizar performance
+// // function optimizePerformance() {
+// //     // Lazy loading para imagens
+// //     const images = document.querySelectorAll('img');
+// //     if ('IntersectionObserver' in window) {
+// //         const imageObserver = new IntersectionObserver((entries, observer) => {
+// //             entries.forEach(entry => {
+// //                 if (entry.isIntersecting) {
+// //                     const img = entry.target;
+// //                     img.src = img.dataset.src;
+// //                     img.classList.remove('lazy');
+// //                     imageObserver.unobserve(img);
+// //                 }
+// //             });
+// //         });
         
-        images.forEach(img => imageObserver.observe(img));
-    }
+// //         images.forEach(img => imageObserver.observe(img));
+// //     }
     
-    // Preload de recursos críticos
-    const criticalResources = [
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-    ];
+//     // Preload de recursos críticos
+//     const criticalResources = [
+//         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
+//         'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+//     ];
     
-    criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = 'style';
-        document.head.appendChild(link);
-    });
-}
+//     criticalResources.forEach(resource => {
+//         const link = document.createElement('link');
+//         link.rel = 'preload';
+//         link.href = resource;
+//         link.as = 'style';
+//         document.head.appendChild(link);
+//     });
+// }
 
 // Função para adicionar loading state nos botões
 function addLoadingStates() {
