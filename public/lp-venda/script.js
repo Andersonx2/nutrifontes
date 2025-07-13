@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addScrollProgress();
     addAnimationCSS();
     addEventTracking();
-    optimizePerformance();
+    // optimizePerformance();
     addLoadingStates();
     
     // Descomente as linhas abaixo se quiser adicionar essas funcionalidades
