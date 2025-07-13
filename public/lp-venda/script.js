@@ -330,38 +330,38 @@ function addEventTracking() {
 }
 
 // Função para otimizar performance
-function optimizePerformance() {
-    // Lazy loading para imagens
-    const images = document.querySelectorAll('img');
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
+// function optimizePerformance() {
+//     // Lazy loading para imagens
+//     const images = document.querySelectorAll('img');
+//     if ('IntersectionObserver' in window) {
+//         const imageObserver = new IntersectionObserver((entries, observer) => {
+//             entries.forEach(entry => {
+//                 if (entry.isIntersecting) {
+//                     const img = entry.target;
+//                     img.src = img.dataset.src;
+//                     img.classList.remove('lazy');
+//                     imageObserver.unobserve(img);
+//                 }
+//             });
+//         });
         
-        images.forEach(img => imageObserver.observe(img));
-    }
+//         images.forEach(img => imageObserver.observe(img));
+//     }
 
-    ///Preload de recursos críticos
-    const criticalResources = [
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-    ];
+//     ///Preload de recursos críticos
+//     const criticalResources = [
+//         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
+//         'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+//     ];
     
-    criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = 'style';
-        document.head.appendChild(link);
-    });
-}
+//     criticalResources.forEach(resource => {
+//         const link = document.createElement('link');
+//         link.rel = 'preload';
+//         link.href = resource;
+//         link.as = 'style';
+//         document.head.appendChild(link);
+//     });
+// }
 
 // Função para adicionar loading state nos botões
 function addLoadingStates() {
@@ -400,37 +400,37 @@ window.addEventListener('resize', () => {
 });
 
 // Inicializar todas as funcionalidades quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Landing page otimizada carregada!');
+// document.addEventListener('DOMContentLoaded', function() {
+//     console.log('Landing page otimizada carregada!');
     
     // Inicializar todas as funcionalidades
-    animateOnScroll();
-    addUrgencyCounter();
-    addHoverEffects();
-    addScrollProgress();
-    addAnimationCSS();
-    addEventTracking();
-    // optimizePerformance();
-    addLoadingStates();
+    // animateOnScroll();
+    // addUrgencyCounter();
+    // addHoverEffects();
+    // addScrollProgress();
+    // addAnimationCSS();
+    // addEventTracking();
+    // // optimizePerformance();
+    // addLoadingStates();
     
     // Descomente as linhas abaixo se quiser adicionar essas funcionalidades
     // addCountdownTimer();
     // addLastPurchaseNotification();
     
-    // Adicionar smooth scroll para todos os links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-});
+//     // Adicionar smooth scroll para todos os links internos
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function (e) {
+//             e.preventDefault();
+//             const target = document.querySelector(this.getAttribute('href'));
+//             if (target) {
+//                 target.scrollIntoView({
+//                     behavior: 'smooth',
+//                     block: 'start'
+//                 });
+//             }
+//         });
+//     });
+// });
 
 // Função para adicionar efeito de destaque nos preços
 function highlightPricing() {
