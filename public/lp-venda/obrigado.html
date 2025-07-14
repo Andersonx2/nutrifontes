@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Obrigado pela sua compra! | Cinthia Fontes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { 500: '#667eea' },
+                        secondary: { 500: '#764ba2' },
+                        accent: { 500: '#ff6b6b', 600: '#ee5a24' },
+                        success: { 500: '#4ade80', 600: '#22c55e' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Meta Pixel Code (Conversão) -->
+    <script>
+        fbq('track', 'Purchase', {
+            value: 47.00,
+            currency: 'BRL'
+        });
+    </script>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body class="bg-gray-50 font-inter">
+    <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-center px-6">
+        <div class="max-w-xl">
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold mb-4">🎉 Compra Confirmada!</h1>
+                <p class="text-lg">Obrigado por confiar no meu trabalho. O seu e-book já foi enviado para o seu e-mail cadastrado.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-xl p-8 text-gray-800">
+                <h2 class="text-2xl font-bold mb-2">📥 O que você deve fazer agora:</h2>
+                <ul class="text-left space-y-3 text-lg">
+                    <li class="flex items-center gap-2"><span class="text-success-500">✔</span> Verifique sua caixa de entrada e spam.</li>
+                    <li class="flex items-center gap-2"><span class="text-success-500">✔</span> Salve o e-mail com o seu link de acesso.</li>
+                    <li class="flex items-center gap-2"><span class="text-success-500">✔</span> Comece a usar as receitas ainda hoje!</li>
+                </ul>
+            </div>
+            <a href="https://seusite.com.br" class="inline-block mt-8 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold px-8 py-4 rounded-full hover:scale-105 transition">Voltar para o site</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2024 Cinthia Fontes - Nutricionista Especialista em Diabetes. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
