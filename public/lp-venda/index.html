@@ -14,12 +14,17 @@
     <title>E-book Receitas com Contagem de Carboidratos - Cinthia Fontes</title>
     <meta name="description" content="Descubra receitas seguras e saborosas para diabetes com contagem exata de carboidratos. E-book exclusivo da nutricionista Cinthia Fontes.">
     
+    <link href="../css/output.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
     <noscript>
@@ -27,23 +32,6 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     </noscript>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 500: '#667eea', 600: '#5a67d8', 700: '#4c51bf' },
-                        secondary: { 500: '#764ba2', 600: '#6b46c1' },
-                        accent: { 500: '#ff6b6b', 600: '#ee5a24' },
-                        success: { 500: '#4ade80', 600: '#22c55e' }
-                    }
-                }
-            }
-        }
-    </script>
 
     <script>
         !function(f,b,e,v,n,t,s)
@@ -84,6 +72,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <section class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white pt-24 pb-16 relative overflow-hidden">
+  
+        
         <div class="absolute inset-0 bg-black/10"></div>
         <div class="max-w-6xl mx-auto px-4 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -117,7 +107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="flex justify-center" data-aos="fade-left">
                     <div class="relative transform rotate-y-12 rotate-x-6 hover:rotate-y-8 hover:rotate-x-4 transition-transform duration-500">
-                        <img src="../img/capa-ebook.png" alt="Capa do E-book Receitas com Contagem de Carboidratos" class="w-90 h-200 rounded-2xl flex flex-col justify-center items-center text-center text-white shadow-2xl" loading="lazy" decoding="async">
+                        <img src="../img/capa-ebook.png" alt="Capa do E-book Receitas com Contagem de Carboidratos" class="w-full h-auto rounded-2xl flex flex-col justify-center items-center text-center text-white shadow-2xl" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
