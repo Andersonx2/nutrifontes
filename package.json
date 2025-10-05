@@ -4,10 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./public/css/output.css --minify"
   },
   "dependencies": {
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "4.1.7"
   },
   "engines": {
     "node": ">=18"
