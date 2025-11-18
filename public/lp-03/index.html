@@ -3,234 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinthia Nutri - Ebook de Receitas para Diabéticos</title>
+    <title>Contagem de Carboidratos: Domine Sua Glicemia | Cinthia Nutri</title>
+    <!-- Carrega o Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Configuração de estilo personalizada do Tailwind: Tons mais leves e profissionais -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#047857', // Verde Esmeralda
-                        'primary-dark': '#065f46',
-                        accent: '#F97316',   // Laranja
-                        'accent-dark': '#EA580C',
+                        'primary': '#2563EB', // Azul Profissional (Corporate Blue) para Confiança e Autoridade
+                        'secondary': '#F97316', // Laranja para Ação e Urgência (Alto Contraste)
+                        'background': '#F8FAFC', // Cinza/Azul muito claro (Slate 50) para leveza
+                        'text-dark': '#1F2937', // Texto escuro para legibilidade
+                        'text-gray': '#4B5563', // Texto cinza para subtítulos
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* Estilos adicionais para tipografia e sombra */
+        .hero-glow {
+            /* Brilho suave no título principal em azul */
+            text-shadow: 0 0 10px rgba(37, 99, 235, 0.6); 
         }
-        .text-shadow-custom {
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        /* Garantindo que o CTA sticky funcione bem no topo */
+        .sticky-cta {
+            z-index: 50;
         }
     </style>
-    
 </head>
-<body class="bg-slate-50">
+<body class="bg-background font-sans text-text-dark">
 
-    <section class="bg-white pt-12 pb-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-                A paz de espírito para comer o que você ama, com a <span class="text-primary">segurança que seu diabetes exige.</span>
-            </h1>
-            <p class="text-gray-600 text-lg md:text-xl mt-4 max-w-3xl mx-auto">
-                Chega de incerteza na cozinha. Tenha acesso a receitas deliciosas com carboidratos já calculados para você por uma nutricionista especialista.
-            </p>
-            <div class="mt-8">
-                <a href="[LINK PARA SEU CHECKOUT]" class="bg-gradient-to-r from-accent to-accent-dark text-white font-bold text-lg py-4 px-10 rounded-full transition-transform transform hover:scale-105 shadow-lg">
-                    QUERO COZINHAR COM SEGURANÇA!
+    <!-- Sticky CTA (Chamada para Ação Flutuante) - Cor Laranja de Conversão -->
+    <div id="sticky-cta" class="sticky top-0 w-full bg-secondary p-3 shadow-2xl sticky-cta transition-all duration-300">
+        <a href="#checkout" class="block text-center text-lg font-extrabold text-white uppercase tracking-wider hover:bg-orange-600 transition duration-300 rounded-full py-1">
+            GARANTA SUA VAGA AGORA por R$ 97
+        </a>
+    </div>
+
+    <main>
+        <!-- DOBRA 1: HERO (Abertura e Proposta de Valor) -->
+        <section class="py-16 md:py-24 bg-white border-b-4 border-primary shadow-lg">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                
+                <!-- Gatilho de Dor Forte em Azul -->
+                <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 text-primary hero-glow">
+                    Você é diabético e sente que a contagem de carboidratos está sempre te traindo?
+                </h1>
+                
+                <!-- Detalhamento da Dor -->
+                <p class="text-xl sm:text-2xl text-text-gray mb-8 max-w-2xl mx-auto">
+                    Se a sua glicemia vive descontrolada, mesmo quando você tenta fazer tudo certo... <br>
+                    Se cada refeição vira um momento de tensão e medo de errar...
+                </p>
+
+                <!-- Bloco de Destaque do Evento em Azul Claro (Primary/10) -->
+                <div class="bg-primary/5 p-6 sm:p-8 rounded-xl shadow-inner mb-10 border-l-4 border-primary">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-4">
+                        Aprenda a Contar Carboidratos de Forma Simples, Segura e Sem Confusão — AO VIVO
+                    </h2>
+                    
+                    <div class="grid grid-cols-3 gap-4 text-left text-text-dark font-medium mb-6">
+                        <p class="col-span-3 sm:col-span-1 p-3 bg-white rounded-lg shadow-md">
+                            <span class="text-secondary font-bold mr-2 text-xl">📅</span> <span class="block text-sm text-gray-500">Data:</span> <strong class="text-lg">29/11/25</strong>
+                        </p>
+                        <p class="col-span-3 sm:col-span-1 p-3 bg-white rounded-lg shadow-md">
+                            <span class="text-secondary font-bold mr-2 text-xl">⏰</span> <span class="block text-sm text-gray-500">Horário:</span> <strong class="text-lg">09h00</strong>
+                        </p>
+                        <p class="col-span-3 sm:col-span-1 p-3 bg-white rounded-lg shadow-md">
+                            <span class="text-secondary font-bold mr-2 text-xl">📍</span> <span class="block text-sm text-gray-500">Onde:</span> <strong class="text-lg">Zoom (Link por email)</strong>
+                        </p>
+                    </div>
+
+                    <p class="text-2xl font-semibold text-text-dark mb-6">
+                        Garanta sua vaga por apenas <span class="text-secondary font-extrabold text-3xl">R$ 97</span>
+                    </p>
+                    
+                    <!-- CTA Principal em Laranja (Secondary) -->
+                    <a id="hero-cta" href="#checkout" class="w-full sm:w-3/4 mx-auto inline-block py-4 px-8 bg-secondary text-white text-xl font-extrabold uppercase rounded-xl shadow-xl transform hover:scale-[1.03] transition-all duration-300">
+                        CLIQUE AQUI PARA IR AO CHECKOUT
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 2 & 3: CONEXÃO EMOCIONAL E DOR PRINCIPAL -->
+        <section class="py-16 md:py-20 bg-background">
+            <div class="max-w-3xl mx-auto px-6">
+                <!-- Título da Dor em Azul -->
+                <h2 class="text-3xl font-bold text-center text-primary mb-4">
+                    A Comida Virou um Campo Minado.
+                </h2>
+                <p class="text-lg text-center text-text-gray mb-10">
+                    Você tenta, calcula, corrige… mas ainda sente que está sempre um passo atrás.
+                </p>
+
+                <!-- Lista de Dores (A Verdade é Dura) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-secondary">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">A Insegurança Diária</h3>
+                        <ul class="space-y-3 text-lg list-none pl-0 text-text-gray">
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">🔥</span> Glicemias que sobem do nada.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">📉</span> Quedas causadas por erros na contagem.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">😨</span> Medo de comer carboidratos.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">🤔</span> A sensação constante de “Será que fiz certo?”.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-secondary">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">O Impacto Emocional</h3>
+                        <ul class="space-y-3 text-lg list-none pl-0 text-text-gray">
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">😔</span> Culpa silenciosa depois de cada refeição.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">😟</span> Ansiedade ao montar o prato.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">🚨</span> Cada decisão parece um risco.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-3 text-2xl">💔</span> Medo do impacto disso no seu futuro.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Destaque em Azul -->
+                <p class="text-lg text-center mt-8 font-semibold text-primary">
+                    Isso não acontece por falta de esforço. Acontece porque ninguém te ensinou o método certo para sua realidade.
+                </p>
+                
+                <!-- Destaque em Azul -->
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-center text-primary mt-10">
+                    Mas isso pode mudar — e muito mais rápido do que você imagina.
+                </h3>
+            </div>
+        </section>
+
+        <!-- DOBRA 4 & 5: PROMESSA DO EVENTO E CONTEÚDO -->
+        <!-- Fundo em Azul (Primary/90) -->
+        <section class="py-16 md:py-20 bg-primary/90 text-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12">
+                    O Fim da Confusão: O que você vai conquistar no dia 29/11
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <!-- LADO DA PROMESSA/BENEFÍCIOS -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold mb-4 border-b-2 border-white/50 pb-2">
+                            O Novo Cenário da Sua Rotina
+                        </h3>
+                        <p class="text-lg mb-6">
+                            Você vai aprender exatamente o que fazer ANTES de colocar a comida no prato.
+                        </p>
+                        <!-- Ícones em Laranja (Secondary) para contraste com o fundo azul -->
+                        <ul class="space-y-3 text-xl font-medium list-none pl-0">
+                            <li class="flex items-center"><span class="text-secondary text-3xl mr-3">✔️</span> Mais segurança</li>
+                            <li class="flex items-center"><span class="text-secondary text-3xl mr-3">✔️</span> Mais clareza e autonomia</li>
+                            <li class="flex items-center"><span class="text-secondary text-3xl mr-3">✔️</span> Mais estabilidade nas glicemias</li>
+                            <li class="flex items-center"><span class="text-secondary text-3xl mr-3">✔️</span> Mais tranquilidade na rotina</li>
+                        </ul>
+                        <p class="mt-6 text-lg italic">
+                            Sem decorar tabelas. Sem depender de outras pessoas. Sem horas de cálculos.
+                        </p>
+                    </div>
+
+                    <!-- LADO DO CONTEÚDO/APRENDIZADO -->
+                    <div class="bg-white text-text-dark p-6 rounded-xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">
+                            O Que Você Vai Aprender na Prática
+                        </h3>
+                        <ul class="space-y-3 text-lg list-none pl-0 text-text-gray">
+                            <!-- Ícones em Azul (Primary) -->
+                            <li class="flex items-start">
+                                <span class="text-primary text-3xl mr-3">🎯</span> Como identificar carboidratos rapidamente.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary text-3xl mr-3">🎯</span> Como avaliar o prato com segurança (dentro e fora de casa).
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary text-3xl mr-3">🎯</span> Como evitar erros que descontrolam sua glicemia.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary text-3xl mr-3">🎯</span> Um passo a passo simples que cabe na sua rotina.
+                            </li>
+                        </ul>
+                        <p class="mt-6 text-base font-semibold">
+                            Esse não é um workshop teórico. É prático, direto e feito para quem precisa de resultados no dia a dia.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 6: ANCORAGEM DE PREÇO -->
+        <section class="py-16 md:py-20 bg-background">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-text-dark mb-4">
+                    Investir é Mais Inteligente do que Pagar Pelo Erro
+                </h2>
+                <p class="text-lg text-text-gray mb-8">
+                    O workshop custa apenas <strong class="text-secondary text-4xl font-extrabold">R$ 97</strong>.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <!-- Destaques em Azul (Primary) -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border-b-2 border-primary/50">
+                        <p class="text-2xl font-extrabold text-primary">Menos que:</p>
+                        <p class="text-lg text-text-gray">Uma pizza que bagunça sua glicemia.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-lg border-b-2 border-primary/50">
+                        <p class="text-2xl font-extrabold text-primary">Menos que:</p>
+                        <p class="text-lg text-text-gray">Um lanche rápido de fim de semana.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-lg border-b-2 border-primary/50">
+                        <p class="text-2xl font-extrabold text-primary">Menos que:</p>
+                        <p class="text-lg text-text-gray">Duas idas à padaria.</p>
+                    </div>
+                </div>
+
+                <!-- Destaque da Promessa em Azul (Primary) -->
+                <p class="text-2xl font-bold text-text-dark">
+                    Mas o valor que você recebe? <br>
+                    <span class="text-primary">Tranquilidade, segurança e controle</span> sobre suas refeições — algo que dura por anos.
+                </p>
+            </div>
+        </section>
+        
+        <!-- DOBRA 7: PARA QUEM É (Qualificação) -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <!-- Título em Azul -->
+                <h2 class="text-3xl font-bold text-center text-primary mb-10">
+                    Este Evento é Para Você Se...
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-text-gray">
+                    <div class="space-y-4">
+                        <p class="text-lg flex items-start">
+                            <span class="text-secondary text-3xl mr-3">👉</span> É diabético tipo 1 ou tipo 2.
+                        </p>
+                        <p class="text-lg flex items-start">
+                            <span class="text-secondary text-3xl mr-3">👉</span> Tem medo de comer carboidratos.
+                        </p>
+                        <p class="text-lg flex items-start">
+                            <span class="text-secondary text-3xl mr-3">👉</span> Sente insegurança ao montar o prato.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-lg flex items-start">
+                            <span class="text-secondary text-3xl mr-3">👉</span> Está cansado(a) de glicemias que sobem sem explicação.
+                        </p>
+                        <p class="text-lg flex items-start">
+                            <span class="text-secondary text-3xl mr-3">👉</span> Já tentou aprender sozinho(a), mas ainda erra sem querer.
+                        </p>
+                        <p class="text-lg flex items-start">
+                            <span class="text-secondary text-3xl mr-3">👉</span> Quer autonomia e clareza imediata.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Destaque em Azul -->
+                <p class="text-2xl font-extrabold text-center text-primary mt-12">
+                    Se você se identificou com uma dessas frases... essa live é para você.
+                </p>
+            </div>
+        </section>
+
+        <!-- DOBRA 7.5: QUEM É A NUTRICIONISTA (Autoridade e Confiança) -->
+        <section class="py-16 md:py-20 bg-background">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-primary mb-12 border-b pb-4 border-gray-200">
+                    Sua Guia Para a Autonomia: Conheça a Cinthia Nutri
+                </h2>
+                
+                <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-secondary/50 md:flex md:items-start md:text-left space-y-8 md:space-y-0 md:space-x-12">
+                    <!-- Imagem da Nutricionista (Banner) - AGORA COM A IMAGEM REAL -->
+                    <div class="flex-shrink-0 w-full max-w-xs mx-auto md:mx-0 rounded-xl overflow-hidden shadow-2xl ring-4 ring-primary/50">
+                        <img data-content-fetch-id="uploaded:WhatsApp Image 2025-11-18 at 15.11.36_dc856f11.jpg-82a970c1-4d76-41ab-8949-fe2ed11cab35" 
+                             src="../img/Evento 29.jpg" 
+                             alt="[Banner Promocional do Evento com a Nutricionista Cinthia Fontes]" 
+                             class="w-full h-auto object-contain">
+                    </div>
+                    
+                    <!-- Texto de Credibilidade -->
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-extrabold text-text-dark mb-4">
+                            Cinthia Nutri: Especialista em Diabete e Contagem de Carboidratos
+                        </h3>
+                        <p class="text-lg text-text-gray mb-4">
+                            Com anos de experiência focada exclusivamente em pacientes diabéticos tipo 1 e tipo 2, Cinthia desenvolveu um método prático e cientificamente validado que elimina a complexidade da contagem de carboidratos.
+                        </p>
+                        <p class="text-lg text-text-gray font-semibold italic">
+                            O objetivo dela não é apenas ensinar a contar, mas devolver a você a tranquilidade, a autonomia e a segurança para viver sem o medo constante das flutuações da glicemia.
+                        </p>
+                        <a href="https://instagram.com/cinthianutri" target="_blank" class="inline-flex items-center mt-4 text-primary font-bold hover:text-primary/80 transition duration-300">
+                            <span class="mr-2">Siga no Instagram</span> 
+                            <!-- Ícone de seta -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 8: CHAMADA PARA AÇÃO FINAL (Checkout) -->
+        <!-- Fundo em Azul (Primary) -->
+        <section id="checkout" class="py-16 md:py-24 bg-primary text-white">
+            <div class="max-w-xl mx-auto px-6 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">
+                    Sua Decisão HOJE
+                </h2>
+                
+                <div class="bg-white text-text-dark p-6 rounded-xl shadow-xl mb-8">
+                    <p class="text-xl font-medium mb-4">
+                        Continuar errando custa caro. Viver com medo custa caro. Perder o controle custa caro.
+                    </p>
+                    <!-- Destaque do Preço em Laranja (Secondary) -->
+                    <p class="text-3xl font-extrabold">
+                        Aprender da forma certa custa apenas <span class="text-secondary">R$ 97</span>.
+                    </p>
+                </div>
+
+                <p class="text-xl font-semibold mb-8">
+                    Essa decisão pode mudar sua relação com a comida para sempre.
+                </p>
+
+                <!-- CTA Final de Conversão em Laranja (Secondary) -->
+                <a href="#" class="w-full inline-block py-5 px-10 bg-secondary text-white text-2xl font-extrabold uppercase rounded-xl shadow-2xl transform hover:scale-[1.05] transition-all duration-300 ring-4 ring-white">
+                    👉 GARANTA SUA VAGA AGORA
                 </a>
-                <p class="text-gray-500 text-sm mt-3">Acesso imediato e 100% seguro.</p>
-            </div>
-            <div class="mt-12 flex justify-center">
-                <img src="../img/capa-ebook.png" alt="Mockup do Ebook de Receitas em um tablet na cozinha" class="max-w-xl w-full rounded-lg shadow-2xl">
-            </div>
-        </div>
-    </section>
 
-    <section class="py-16 bg-slate-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Você se identifica com alguma dessas situações?</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-5xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md text-left transition-transform transform hover:-translate-y-2">
-                    <i class="fas fa-calculator text-accent text-3xl mb-3"></i>
-                    <p class="text-gray-700">A incerteza constante se a contagem de carboidratos do seu prato está realmente correta.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-left transition-transform transform hover:-translate-y-2">
-                    <i class="fas fa-utensils text-accent text-3xl mb-3"></i>
-                    <p class="text-gray-700">A frustração de comer sempre as mesmas coisas por medo de errar na receita e descontrolar a glicemia.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-left transition-transform transform hover:-translate-y-2">
-                    <i class="fas fa-clock text-accent text-3xl mb-3"></i>
-                    <p class="text-gray-700">O tempo precioso perdido na cozinha, pesando e calculando cada ingrediente do seu prato.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-left transition-transform transform hover:-translate-y-2">
-                    <i class="fas fa-heart-crack text-accent text-3xl mb-3"></i>
-                    <p class="text-gray-700">O desejo de simplesmente sentar à mesa e aproveitar uma refeição saborosa, em paz e sem culpa.</p>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl font-bold text-gray-800">O fim da adivinhação na cozinha chegou!</h2>
-                <p class="text-gray-600 mt-4 text-lg">Imagine ter a liberdade de escolher uma receita, prepará-la rapidamente e ter a total confiança de que ela é segura e deliciosa para você. Este ebook é a sua ferramenta para isso.</p>
-                <ul class="mt-6 space-y-4 text-left">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
-                        <span class="text-gray-700"><strong>Cálculos Exatos e Confiáveis:</strong> Para você ter a tranquilidade de que sua glicemia ficará sob controle.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
-                        <span class="text-gray-700"><strong>Receitas Deliciosas (Doces e Salgadas):</strong> Para você nunca mais sentir que está fazendo uma "dieta restritiva".</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
-                        <span class="text-gray-700"><strong>Passo a Passo Simples e Direto:</strong> Perfeito para qualquer pessoa, mesmo para quem não tem muita habilidade na cozinha.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-primary text-xl mr-3 mt-1"></i>
-                        <span class="text-gray-700"><strong>Acesso Imediato e Vitalício:</strong> Consulte suas receitas favoritas sempre que quiser, direto do seu celular, tablet ou computador.</span>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                 <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1770&auto=format&fit=crop" alt="Prato de comida saudável e colorida" class="rounded-lg shadow-xl mx-auto">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-slate-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Quem calculou cada grama de carboidrato deste ebook?</h2>
-            <div class="flex justify-center mt-6">
-                 <img src="../img/Cinthia 2.jpg" alt="Cinthia Fontes - Nutricionista" class="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white">
-            </div>
-            <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-lg">Olá, eu sou <strong>Cinthia Fontes</strong>. E para que você tenha total segurança neste material, quero que conheça a autoridade por trás de cada receita:</p>
-            <div class="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-                    <h3 class="font-bold text-lg text-primary">Base Científica e Clínica</h3>
-                    <p class="text-gray-600 mt-2">Como Mestre em Nutrição e Especialista em Nutrição Clínica, garanto que cada cálculo é exato, baseado em ciência.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-                    <h3 class="font-bold text-lg text-primary">Especialista em Diabetes</h3>
-                    <p class="text-gray-600 mt-2">Sou Educadora em Diabetes certificada (SBD/IDF). Eu entendo das suas necessidades diárias e da importância da contagem de carboidratos.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-                    <h3 class="font-bold text-lg text-primary">+15 Anos de Experiência</h3>
-                    <p class="text-gray-600 mt-2">Estas receitas são o resultado de mais de 15 anos em consultório, ajudando milhares de pessoas como você a comer com segurança.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800">O que meus pacientes estão dizendo</h2>
-            <p class="text-gray-600 mt-2 text-lg">A confiança de quem já testou e aprovou na prática.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <div class="bg-slate-100 p-8 rounded-xl shadow-lg">
-                    <p class="text-gray-700 italic">"Depois de anos com medo de cozinhar, finalmente sinto que tenho o controle. As receitas são fáceis e deliciosas. A tranquilidade que isso me deu não tem preço."</p>
-                    <div class="flex items-center mt-6">
-                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-14 h-14 rounded-full object-cover border-2 border-primary" alt="Cliente 1">
-                        <div class="ml-4 text-left">
-                            <p class="font-bold text-gray-800">Maria S.</p>
-                            <p class="text-sm text-gray-600">Paciente</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-100 p-8 rounded-xl shadow-lg">
-                    <p class="text-gray-700 italic">"Comprar esse ebook foi o melhor investimento que fiz para o meu tratamento. Prático, direto ao ponto e o melhor: tudo com sabor de comida de verdade!"</p>
-                    <div class="flex items-center mt-6">
-                         <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-14 h-14 rounded-full object-cover border-2 border-primary" alt="Cliente 2">
-                        <div class="ml-4 text-left">
-                            <p class="font-bold text-gray-800">João P.</p>
-                            <p class="text-sm text-gray-600">Comprador do Ebook</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-100 p-8 rounded-xl shadow-lg">
-                    <p class="text-gray-700 italic">"A Cinthia conseguiu o impossível: fazer eu me apaixonar por cozinhar de novo. Ter a contagem pronta me poupa um tempo e um estresse enorme."</p>
-                    <div class="flex items-center mt-6">
-                         <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-14 h-14 rounded-full object-cover border-2 border-primary" alt="Cliente 3">
-                        <div class="ml-4 text-left">
-                            <p class="font-bold text-gray-800">Carla M.</p>
-                            <p class="text-sm text-gray-600">Paciente</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop&blend=000000&blend-alpha=50&blend-mode=multiply');">
-        <div class="container mx-auto px-6">
-            <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-800 text-shadow-custom">Receba Acesso Imediato a Tudo Isso!</h2>
-                <div class="text-left mt-8 space-y-3 text-lg">
-                    <p class="text-gray-700"><i class="fas fa-check text-green-500 mr-2"></i><strong>Ebook Principal de Receitas</strong> (Valor: R$ 97,00)</p>
-                    <p class="text-gray-700"><i class="fas fa-check text-green-500 mr-2"></i><strong>BÔNUS 1:</strong> Guia de Compras Inteligente (Valor: R$ 27,00)</p>
-                    <p class="text-gray-700"><i class="fas fa-check text-green-500 mr-2"></i><strong>BÔNUS 2:</strong> Lista de Substituições Práticas (Valor: R$ 17,00)</p>
-                </div>
-                <div class="mt-6 bg-slate-100 p-6 rounded-lg">
-                    <p class="text-gray-500 text-lg">Valor total: <span class="line-through">R$ 141,00</span></p>
-                    <p class="text-gray-800 font-bold mt-2">Seu investimento hoje por apenas:</p>
-                    <p class="text-5xl font-bold text-primary my-2">R$ 49,90</p>
-                    <p class="text-gray-600">ou 7x de R$ 8,02</p>
-                </div>
-                <a href="[LINK PARA SEU CHECKOUT]" class="bg-gradient-to-r from-accent to-accent-dark w-full mt-8 inline-block text-white font-bold text-xl py-4 px-10 rounded-full transition-transform transform hover:scale-105 shadow-lg">
-                    SIM, QUERO MEU ACESSO IMEDIATO!
-                </a>
-                <div class="mt-8 flex justify-center items-center">
-                    <img src="https://img.icons8.com/plasticine/100/null/warranty.png" alt="Selo de Garantia" class="w-24 h-24">
-                    <div class="text-left ml-4">
-                        <h4 class="font-bold text-gray-800">Sua Satisfação ou seu Dinheiro de Volta!</h4>
-                        <p class="text-gray-600 text-sm">Seu risco é zero. Se em 7 dias você não amar o ebook, basta me enviar um único email e eu devolvo 100% do seu dinheiro.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes</h2>
-            <div class="space-y-4">
-                <details class="p-6 bg-slate-100 rounded-lg cursor-pointer">
-                    <summary class="font-semibold text-lg">Para qual tipo de diabetes o ebook é indicado?</summary>
-                    <p class="mt-4 text-gray-700">As receitas são pensadas e calculadas para pessoas com Diabetes Tipo 1, Tipo 2 e Diabetes Gestacional que fazem uso da contagem de carboidratos como parte do tratamento.</p>
-                </details>
-                <details class="p-6 bg-slate-100 rounded-lg cursor-pointer">
-                    <summary class="font-semibold text-lg">Como vou receber o acesso ao material?</summary>
-                    <p class="mt-4 text-gray-700">O acesso é imediato após a confirmação do pagamento. Você receberá um email da plataforma com o link para baixar o seu ebook em formato PDF.</p>
-                </details>
-                <details class="p-6 bg-slate-100 rounded-lg cursor-pointer">
-                    <summary class="font-semibold text-lg">Preciso de ingredientes difíceis de encontrar?</summary>
-                    <p class="mt-4 text-gray-700">Não! Todas as receitas foram criadas com ingredientes acessíveis, que você encontra facilmente em qualquer supermercado.</p>
-                </details>
-                 <details class="p-6 bg-slate-100 rounded-lg cursor-pointer">
-                    <summary class="font-semibold text-lg">Posso ver as receitas no celular?</summary>
-                    <p class="mt-4 text-gray-700">Sim! O ebook é em formato PDF e você pode abrir e consultar em qualquer celular, tablet ou computador, a qualquer hora.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Cinthia Fontes Nutricionista. Todos os direitos reservados.</p>
-            <p class="text-sm text-gray-400 mt-2">Este produto não substitui o parecer médico profissional. Sempre consulte um médico para tratar de assuntos relativos à sua saúde.</p>
+    <footer class="text-center py-6 text-sm text-gray-500 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>&copy; 2025 Cinthia Nutri. Todos os direitos reservados. Evento ao vivo em 29/11/25.</p>
+            <p class="mt-2"><a href="#" class="hover:underline">Termos de Uso</a> | <a href="#" class="hover:underline">Política de Privacidade</a></p>
         </div>
     </footer>
+
+    <!-- Script para tornar o CTA flutuante mais discreto ao rolar para o Hero CTA -->
+    <script>
+        const stickyCta = document.getElementById('sticky-cta');
+        const heroCta = document.getElementById('hero-cta');
+
+        window.addEventListener('scroll', () => {
+            // Se o usuário rolou o suficiente para ver o CTA principal (Hero)
+            if (heroCta && window.scrollY > heroCta.offsetTop - 100) {
+                // Torna o CTA sticky um pouco mais discreto, mas ainda visível
+                stickyCta.classList.remove('bg-secondary');
+                stickyCta.classList.add('bg-secondary/75');
+            } else {
+                // Volta à cor vibrante no topo
+                stickyCta.classList.remove('bg-secondary/75');
+                stickyCta.classList.add('bg-secondary');
+            }
+        });
+    </script>
 
 </body>
 </html>
