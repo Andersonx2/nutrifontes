@@ -12,8 +12,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#2563EB', // Azul Profissional (Corporate Blue) para Confiança e Autoridade
-                        'secondary': '#F97316', // Laranja para Ação e Urgência (Alto Contraste)
+                        'primary': '#2563EB', // corporate-blue (Usado para Confiança e Autoridade)
+                        'secondary': '#F97316', // action-orange (Usado para Ação e Urgência - Alto Contraste)
+                        'accent-red': '#EF4444', // Vermelho para escassez
                         'background': '#F8FAFC', // Cinza/Azul muito claro (Slate 50) para leveza
                         'text-dark': '#1F2937', // Texto escuro para legibilidade
                         'text-gray': '#4B5563', // Texto cinza para subtítulos
@@ -41,8 +42,8 @@
 
     <!-- Sticky CTA (Chamada para Ação Flutuante) - Cor Laranja de Conversão -->
     <div id="sticky-cta" class="sticky top-0 w-full bg-secondary p-3 shadow-2xl sticky-cta transition-all duration-300">
-        <a href="#checkout" class="block text-center text-lg font-extrabold text-white uppercase tracking-wider hover:bg-orange-600 transition duration-300 rounded-full py-1">
-            GARANTA SUA VAGA AGORA por R$ 97
+        <a href="https://seulinkdecheckout.com" target="_blank" class="block text-center text-lg font-extrabold text-white uppercase tracking-wider hover:bg-orange-600 transition duration-300 rounded-full py-1">
+            GARANTA SUA VAGA AGORA por R$ 97,00
         </a>
     </div>
 
@@ -64,28 +65,39 @@
 
                 <!-- Bloco de Destaque do Evento em Azul Claro (Primary/10) -->
                 <div class="bg-primary/5 p-6 sm:p-8 rounded-xl shadow-inner mb-10 border-l-4 border-primary">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-4">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-6">
                         Aprenda a Contar Carboidratos de Forma Simples, Segura e Sem Confusão — AO VIVO
                     </h2>
                     
-                    <div class="grid grid-cols-3 gap-4 text-left text-text-dark font-medium mb-6">
-                        <p class="col-span-3 sm:col-span-1 p-3 bg-white rounded-lg shadow-md">
-                            <span class="text-secondary font-bold mr-2 text-xl">📅</span> <span class="block text-sm text-gray-500">Data:</span> <strong class="text-lg">29/11/25</strong>
+                    <!-- AJUSTE APLICADO AQUI: Mais respiro e destaque aos blocos de informação -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left text-text-dark font-medium mb-8">
+                        <p class="col-span-1 p-4 py-5 bg-white rounded-xl shadow-lg border-b-2 border-secondary/50">
+                            <span class="text-secondary font-bold mr-2 text-xl">📅</span> <span class="block text-sm text-gray-500">Data:</span> <strong class="text-xl">29/11/25</strong>
                         </p>
-                        <p class="col-span-3 sm:col-span-1 p-3 bg-white rounded-lg shadow-md">
-                            <span class="text-secondary font-bold mr-2 text-xl">⏰</span> <span class="block text-sm text-gray-500">Horário:</span> <strong class="text-lg">09h00</strong>
+                        <p class="col-span-1 p-4 py-5 bg-white rounded-xl shadow-lg border-b-2 border-secondary/50">
+                            <span class="text-secondary font-bold mr-2 text-xl">⏰</span> <span class="block text-sm text-gray-500">Horário:</span> <strong class="text-xl">09h00</strong>
                         </p>
-                        <p class="col-span-3 sm:col-span-1 p-3 bg-white rounded-lg shadow-md">
-                            <span class="text-secondary font-bold mr-2 text-xl">📍</span> <span class="block text-sm text-gray-500">Onde:</span> <strong class="text-lg">Zoom (Link por email)</strong>
+                        <p class="col-span-1 p-4 py-5 bg-white rounded-xl shadow-lg border-b-2 border-secondary/50">
+                            <span class="text-secondary font-bold mr-2 text-xl">📍</span> <span class="block text-sm text-gray-500">Onde:</span> <strong class="text-xl">Zoom (Link por email)</strong>
                         </p>
                     </div>
 
+                    <!-- Contagem Regressiva para Urgência -->
+                    <div class="mt-6 mb-6">
+                        <p class="text-xl font-semibold text-accent-red uppercase tracking-wider mb-2">
+                            🚨 VAGAS LIMITADAS! O Workshop começa em:
+                        </p>
+                        <div id="countdown-timer" class="flex justify-center space-x-4 text-text-dark">
+                            <!-- O JavaScript preencherá este bloco -->
+                        </div>
+                    </div>
+
                     <p class="text-2xl font-semibold text-text-dark mb-6">
-                        Garanta sua vaga por apenas <span class="text-secondary font-extrabold text-3xl">R$ 97</span>
+                        Garanta sua vaga por apenas <span class="text-secondary font-extrabold text-3xl">R$ 97,00</span>
                     </p>
                     
-                    <!-- CTA Principal em Laranja (Secondary) -->
-                    <a id="hero-cta" href="#checkout" class="w-full sm:w-3/4 mx-auto inline-block py-4 px-8 bg-secondary text-white text-xl font-extrabold uppercase rounded-xl shadow-xl transform hover:scale-[1.03] transition-all duration-300">
+                    <!-- CTA Principal em Laranja (Secondary) com link de checkout placeholder -->
+                    <a id="hero-cta" href="https://seulinkdecheckout.com" target="_blank" class="w-full sm:w-3/4 mx-auto inline-block py-4 px-8 bg-secondary text-white text-xl font-extrabold uppercase rounded-xl shadow-xl transform hover:scale-[1.03] transition-all duration-300">
                         CLIQUE AQUI PARA IR AO CHECKOUT
                     </a>
                 </div>
@@ -184,7 +196,7 @@
                         </p>
                     </div>
 
-                    <!-- LADO DO CONTEÚDO/APRENDIZADO -->
+                    <!-- LADO DO CONTEÚDO/APRENDIZADO E BÔNUS -->
                     <div class="bg-white text-text-dark p-6 rounded-xl shadow-xl">
                         <h3 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">
                             O Que Você Vai Aprender na Prática
@@ -204,6 +216,16 @@
                                 <span class="text-primary text-3xl mr-3">🎯</span> Um passo a passo simples que cabe na sua rotina.
                             </li>
                         </ul>
+                        
+                        <!-- NOVO: Bônus da Gravação -->
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <h4 class="text-xl font-extrabold text-secondary mb-2 flex items-center">
+                                <span class="text-3xl mr-2">🎁</span> BÔNUS EXCLUSIVO:
+                            </h4>
+                            <p class="text-lg text-text-gray font-medium">
+                                Acesso vitalício à **Gravação Completa do Workshop**, para você revisar e assistir quando quiser.
+                            </p>
+                        </div>
                         <p class="mt-6 text-base font-semibold">
                             Esse não é um workshop teórico. É prático, direto e feito para quem precisa de resultados no dia a dia.
                         </p>
@@ -214,13 +236,13 @@
         </section>
 
         <!-- DOBRA 6: ANCORAGEM DE PREÇO -->
-        <section class="py-16 md:py-20 bg-background">
+        <section class="py-16 md:py-20 bg-background" id="checkout">
             <div class="max-w-3xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold text-text-dark mb-4">
                     Investir é Mais Inteligente do que Pagar Pelo Erro
                 </h2>
                 <p class="text-lg text-text-gray mb-8">
-                    O workshop custa apenas <strong class="text-secondary text-4xl font-extrabold">R$ 97</strong>.
+                    O workshop custa apenas <strong class="text-secondary text-4xl font-extrabold">R$ 97,00</strong>.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -246,9 +268,50 @@
                 </p>
             </div>
         </section>
-        
-        <!-- DOBRA 7: PARA QUEM É (Qualificação) -->
+
+        <!-- DOBRA 6.5 - PROVA SOCIAL (Testemunhos Mockados) -->
         <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-secondary mb-12">
+                    Quem já usou o método da Cinthia Nutri
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Testemunho 1 -->
+                    <div class="bg-background p-6 rounded-xl shadow-lg border-t-4 border-primary/80">
+                        <p class="italic text-lg text-text-dark mb-4">
+                            "Finalmente entendi o que estava fazendo de errado. Minha glicemia não sobe mais de forma aleatória. É liberdade!"
+                        </p>
+                        <p class="font-bold text-primary">- Mônica P. (Diabética Tipo 1)</p>
+                    </div>
+
+                    <!-- Testemunho 2 -->
+                    <div class="bg-background p-6 rounded-xl shadow-lg border-t-4 border-primary/80">
+                        <p class="italic text-lg text-text-dark mb-4">
+                            "O medo de comer acabou. O método é simples e muito prático. Deveria ser ensinado para todos os diabéticos."
+                        </p>
+                        <p class="font-bold text-primary">- João C. (Diabético Tipo 2)</p>
+                    </div>
+                    
+                    <!-- Testemunho 3 -->
+                    <div class="bg-background p-6 rounded-xl shadow-lg border-t-4 border-primary/80">
+                        <p class="italic text-lg text-text-dark mb-4">
+                            "A Cinthia realmente simplifica o que parece complexo. Glicemias estáveis e sem ansiedade! Recomendo mil vezes."
+                        </p>
+                        <p class="font-bold text-primary">- Ana F. (Mãe de Diabético Tipo 1)</p>
+                    </div>
+                </div>
+
+                <p class="mt-10 text-xl font-semibold text-text-gray">
+                    <span class="text-secondary font-extrabold">Junte-se a centenas</span> de pessoas que transformaram sua relação com a glicemia.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- DOBRA 7: PARA QUEM É (Qualificação) -->
+        <section class="py-16 md:py-20 bg-background">
             <div class="max-w-4xl mx-auto px-6">
                 <!-- Título em Azul -->
                 <h2 class="text-3xl font-bold text-center text-primary mb-10">
@@ -288,14 +351,14 @@
         </section>
 
         <!-- DOBRA 7.5: QUEM É A NUTRICIONISTA (Autoridade e Confiança) -->
-        <section class="py-16 md:py-20 bg-background">
+        <section class="py-16 md:py-20 bg-white">
             <div class="max-w-4xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold text-primary mb-12 border-b pb-4 border-gray-200">
                     Sua Guia Para a Autonomia: Conheça a Cinthia Nutri
                 </h2>
                 
-                <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-secondary/50 md:flex md:items-start md:text-left space-y-8 md:space-y-0 md:space-x-12">
-                    <!-- Imagem da Nutricionista (Banner) - AGORA COM A IMAGEM REAL -->
+                <div class="bg-background p-8 rounded-xl shadow-xl border-t-4 border-secondary/50 md:flex md:items-start md:text-left space-y-8 md:space-y-0 md:space-x-12">
+                    <!-- Imagem da Nutricionista (Banner) -->
                     <div class="flex-shrink-0 w-full max-w-xs mx-auto md:mx-0 rounded-xl overflow-hidden shadow-2xl ring-4 ring-primary/50">
                         <img data-content-fetch-id="uploaded:WhatsApp Image 2025-11-18 at 15.11.36_dc856f11.jpg-82a970c1-4d76-41ab-8949-fe2ed11cab35" 
                              src="../img/Evento 29.jpg" 
@@ -326,7 +389,7 @@
 
         <!-- DOBRA 8: CHAMADA PARA AÇÃO FINAL (Checkout) -->
         <!-- Fundo em Azul (Primary) -->
-        <section id="checkout" class="py-16 md:py-24 bg-primary text-white">
+        <section class="py-16 md:py-24 bg-primary text-white">
             <div class="max-w-xl mx-auto px-6 text-center">
                 <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">
                     Sua Decisão HOJE
@@ -338,7 +401,7 @@
                     </p>
                     <!-- Destaque do Preço em Laranja (Secondary) -->
                     <p class="text-3xl font-extrabold">
-                        Aprender da forma certa custa apenas <span class="text-secondary">R$ 97</span>.
+                        Aprender da forma certa custa apenas <span class="text-secondary">R$ 97,00</span>.
                     </p>
                 </div>
 
@@ -347,7 +410,7 @@
                 </p>
 
                 <!-- CTA Final de Conversão em Laranja (Secondary) -->
-                <a href="#" class="w-full inline-block py-5 px-10 bg-secondary text-white text-2xl font-extrabold uppercase rounded-xl shadow-2xl transform hover:scale-[1.05] transition-all duration-300 ring-4 ring-white">
+                <a href="https://seulinkdecheckout.com" target="_blank" class="w-full inline-block py-5 px-10 bg-secondary text-white text-2xl font-extrabold uppercase rounded-xl shadow-2xl transform hover:scale-[1.05] transition-all duration-300 ring-4 ring-white">
                     👉 GARANTA SUA VAGA AGORA
                 </a>
 
@@ -362,8 +425,46 @@
         </div>
     </footer>
 
-    <!-- Script para tornar o CTA flutuante mais discreto ao rolar para o Hero CTA -->
+    <!-- Scripts de Interatividade -->
     <script>
+        // 1. Script para Contagem Regressiva (Urgência)
+        const countdownTimer = document.getElementById('countdown-timer');
+        // Define a data do evento (29 de Novembro de 2025 às 09:00:00)
+        const eventDate = new Date("November 29, 2025 09:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                // Evento já começou
+                countdownTimer.innerHTML = '<span class="text-xl font-extrabold text-accent-red">EVENTO COMEÇOU! ÚLTIMA CHANCE DE ENTRAR.</span>';
+                return;
+            }
+
+            const formatTime = (value, unit) => `
+                <div class="bg-white p-2 rounded-lg shadow-md min-w-[50px]">
+                    <span class="text-2xl font-extrabold text-primary block leading-none">${String(value).padStart(2, '0')}</span>
+                    <span class="text-xs uppercase text-gray-500">${unit}</span>
+                </div>
+            `;
+
+            countdownTimer.innerHTML =
+                formatTime(days, 'dias') +
+                formatTime(hours, 'horas') +
+                formatTime(minutes, 'mins') +
+                formatTime(seconds, 'segs');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // 2. Script para tornar o CTA flutuante mais discreto ao rolar para o Hero CTA
         const stickyCta = document.getElementById('sticky-cta');
         const heroCta = document.getElementById('hero-cta');
 
