@@ -24,6 +24,14 @@
     {
       "source": "/lp-workshop",
       "destination": "/lp-workshop/index.html"
+    },
+    {
+      "source": "/links",
+      "destination": "/links/index.html"
+    },
+    {
+      "source": "/bio",
+      "destination": "/links/index.html"
     }
   ]
 }
